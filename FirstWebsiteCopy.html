@@ -31,6 +31,44 @@
   background-color: #FFA07A;
   padding: 20px;
 }
+        
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
 a {
     text-decoration: none;
@@ -102,8 +140,11 @@ a {
     </div>
 <br>
 <!-- we created our own class, img, and put .img so the image would center align -->
-<div class="img">
-    <img src="https://media.giphy.com/media/mCW8bl1sCwuZy/giphy.gif" alt="autumn leaves">
+<div class="img container">
+    <img src="https://media.giphy.com/media/mCW8bl1sCwuZy/giphy.gif" alt="autumn leaves" class="image">
+        <div class="overlay">
+                <div class="text">Gif</div>
+        </div>
     
     </div>
 <br>
